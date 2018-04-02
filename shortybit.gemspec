@@ -6,11 +6,11 @@ require 'shortybit/version'
 Gem::Specification.new do |spec|
   spec.name          = "shortybit"
   spec.version       = Shortybit::VERSION
-  spec.authors       = ["Lani1321"]
+  spec.authors       = ["Lani Berry"]
   spec.email         = ["lani.berry13@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Gem to wrap Bitly API.}
+  spec.description   = %q{Gem to wrap Bitly API.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -33,4 +33,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "vcr"
+  spec.add_development_dependency "webmock"
+
+  spec.add_dependency "faraday"
+  spec.add_dependency "json"
+  spec.add_dependency "figaro"
 end
