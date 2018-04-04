@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=664d80152194f99805a5979316e0f1af16416666&longUrl=https://www.reddit.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Apr 2018 07:39:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '235'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"a686b194a37064f927619e873c303507afc97754"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/2uNgpk4",
+        "aggregate_link": "http://bit.ly/grRCQh", "long_url": "https://www.reddit.com/",
+        "new_link": 0, "user_hash": "2uNgpk4"}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 04 Apr 2018 07:39:11 GMT
+recorded_with: VCR 4.0.0

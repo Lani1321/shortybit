@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/link/clicks?access_token=664d80152194f99805a5979316e0f1af16416666&link=http://bit.ly/2GQBVJn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Apr 2018 07:23:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '140'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"f2ea2a28943df31d4e31a8ab78988d108f0d5506"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"units": -1, "unit_reference_ts": null,
+        "tz_offset": -4, "unit": "day", "link_clicks": 1}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Wed, 04 Apr 2018 07:23:09 GMT
+recorded_with: VCR 4.0.0
