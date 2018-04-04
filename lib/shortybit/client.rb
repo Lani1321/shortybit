@@ -30,6 +30,11 @@ module Shortybit
       links = parsed_response["data"]["link_history"]
     end
 
-    
+    # Returns hash of the saved link
+    def link_save(client, long_url)
+      response = Faraday.get("#{BASE_URL}#{END_POINT[:link_save]}?access_token=#{client.access_token}&longUrl=#{long_url}")
+      parsed_response = JSON.parse(response.body)
+      saved_link = parsed_response["data"]["link_save"]
+    end    
   end
 end
