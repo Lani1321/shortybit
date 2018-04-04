@@ -121,3 +121,6 @@ Tests can be run with this command:
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## That's a wrap
+![Alt Text](https://giphy.com/embed/ZLxRWG0vhzpiE)
