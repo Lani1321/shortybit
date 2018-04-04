@@ -12,13 +12,24 @@ module Shortybit
       @access_token = access_token
     end
 
-    # Returns number of clicks
+    # Returns number of clicks for bitlink
+    # bit_link is expected to be the shortened url
+    # Pass in client to get access token and interpolate in response
     def get_clicks(client, bit_link)
       response = Faraday.get("#{BASE_URL}#{END_POINT[:clicks]}?access_token=#{client.access_token}&link=#{bit_link}")
 
       # Parse JSON
       parsed_response = JSON.parse(response.body)
       clicks = parsed_response["data"]["link_clicks"]
-    end    
+    end
+
+    # Returns hash of link history
+    def link_history(client)
+      response = Faraday.get("#{BASE_URL}#{END_POINT[:link_history]}?access_token=#{client.access_token}")
+      parsed_response = JSON.parse(response.body)
+      links = parsed_response["data"]["link_history"]
+    end
+
+    
   end
 end
