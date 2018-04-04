@@ -98,7 +98,7 @@ You can now use that client to expose the data from the API:
 
 ```
   # Get amount of clicks for a specific link
-  client.get_clicks("http://bit.ly/2GQBVJn") #=> Returns a Fixnum
+  client.get_clicks(client, "http://bit.ly/2GQBVJn") #=> Returns a Fixnum
 
   # Result 
   2
