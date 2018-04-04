@@ -1,8 +1,16 @@
 # Shortybit
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shortybit`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby Library for accessing Bitly's REST API
 
-TODO: Delete this and the text above, and describe your gem
+To use this gem, you need a bit.ly access token.  To register go to [bitly.com](https://bitly.com/a/sign_up?utm_content=site-free-button&utm_source=organic&utm_medium=website&utm_campaign=null&utm_cta=site-free-button).  
+If you already have a bit.ly account:
+  - Navigate to the collapsable hamburger menu(your account) at the top right corner of the page
+  - Click on 'Settings'
+  - Click on 'Advanced Settings'
+  - Click on 'API Support' or 'OAuth'
+  - If you clicked on 'API support' then click on 'Generic Access Tokens' in blue
+  - If you clicked on 'OAuth' then click on 'Generic Access Token'
+  - Put in your password then click the orange 'Generate Token' button at the bottom
 
 ## Installation
 
@@ -22,8 +30,86 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a client using your access token as follows:
+```
+  # Create a client
+  client = Shortybit::Client.new(access_token)
 
+  # Result 
+  #<Shortybit::Client:0x007fee034de178 @access_token="664d80152194f99805a5979316e0f1af16416666">
+
+```
+
+You can now use that client to expose the data from the API:
+```
+  # Get the entries from your link history in reverse chronological order
+  client.link_history(client) #=> Returns a hash of the specific user link history data from Bitly
+
+  # Result
+    {
+      "has_link_deeplinks": false,
+      "archived": false,
+      "user_ts": 1522824170,
+      "title": "reddit: the front page of the internet",
+      "created_at": 1522824170,
+      "tags": [],
+      "modified_at": 1522824170,
+      "campaign_ids": [],
+      "private": true,
+      "aggregate_link": "http://bit.ly/grRCQh",
+      "long_url": "https://www.reddit.com/",
+      "client_id": "a5e8cebb233c5d07e5c553e917dffb92fec5264d",
+      "link": "http://bit.ly/2uNgpk4",
+      "is_domain_deeplink": false,
+      "encoding_user": {
+          "login": "o_k9q7gj1kj",
+          "display_name": "Lani Berry",
+          "full_name": "Lani Berry"
+      }
+    },
+    {
+      "has_link_deeplinks": false,
+      "archived": false,
+      "user_ts": 1522816641,
+      "title": "Google",
+      "created_at": 1522816641,
+      "tags": [],
+      "modified_at": 1522816641,
+      "campaign_ids": [],
+      "private": true,
+      "aggregate_link": "http://bit.ly/2V6CFi",
+      "long_url": "http://www.google.com/",
+      "client_id": "",
+      "link": "http://bit.ly/2Gvv58L",
+      "is_domain_deeplink": false,
+      "encoding_user": {
+          "login": "o_k9q7gj1kj",
+          "display_name": "Lani Berry",
+          "full_name": "Lani Berry"
+      }
+    }
+```
+
+```
+  # Get amount of clicks for a specific link
+  client.get_clicks("http://bit.ly/2GQBVJn") #=> Returns a Fixnum
+
+  # Result 
+  2
+```
+
+```
+  # Save a long URL as a Bitlink in a user's history. Also returns a short URL for that link.
+  client.link_save(client, "https://www.reddit.com/") #=> Returns a hash with the original URL and short URL 
+
+  # Result
+    {
+      "link"=>"http://bit.ly/2uNgpk4", 
+      "aggregate_link"=>"http://bit.ly/grRCQh", 
+      "long_url"=>"https://www.reddit.com/", 
+      "new_link"=>1, "user_hash"=>"2uNgpk4"
+    }
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
