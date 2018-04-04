@@ -16,6 +16,7 @@ If you already have a bit.ly account:
   - Put in your password then click the orange 'Generate Token' button at the bottom
 
 ## Dependencies
+  - [Ruby 2.2.5](https://www.ruby-lang.org/en/downloads/)
   - [bundler](http://bundler.io/)
   - [RubyGems](https://github.com/rubygems/rubygems)
 ## Installation
@@ -118,7 +119,7 @@ You can now use that client to expose the data from the API:
 ```
 ## Tests
 
-Tests can be run with this command:
+Tests can be run with this command from the root of the project in terminal:
   $bundle exec ruby test/shortybit/client_test.rb
 
 ## License
