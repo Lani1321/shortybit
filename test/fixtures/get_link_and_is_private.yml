@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_history?access_token=664d80152194f99805a5979316e0f1af16416666
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 04 Apr 2018 07:56:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3354'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"7bdf534aac74bc7332048f533fd8dd7beff7d1ae"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_history": [{"has_link_deeplinks":
+        false, "archived": false, "user_ts": 1522824170, "title": "reddit: the front
+        page of the internet", "created_at": 1522824170, "tags": [], "modified_at":
+        1522824170, "campaign_ids": [], "private": true, "aggregate_link": "http://bit.ly/grRCQh",
+        "long_url": "https://www.reddit.com/", "client_id": "a5e8cebb233c5d07e5c553e917dffb92fec5264d",
+        "link": "http://bit.ly/2uNgpk4", "is_domain_deeplink": false, "encoding_user":
+        {"login": "o_k9q7gj1kj", "display_name": "Lani Berry", "full_name": "Lani
+        Berry"}}, {"has_link_deeplinks": false, "archived": false, "user_ts": 1522823392,
+        "title": "Ruby ''require'' error: cannot load such file - Stack Overflow",
+        "created_at": 1522823392, "tags": [], "modified_at": 1522823392, "campaign_ids":
+        [], "private": true, "aggregate_link": "http://bit.ly/1iP5qM9", "long_url":
+        "https://stackoverflow.com/questions/9750610/ruby-require-error-cannot-load-such-file",
+        "client_id": "a5e8cebb233c5d07e5c553e917dffb92fec5264d", "link": "http://bit.ly/2GvD2e7",
+        "is_domain_deeplink": false, "encoding_user": {"login": "o_k9q7gj1kj", "display_name":
+        "Lani Berry", "full_name": "Lani Berry"}}, {"has_link_deeplinks": false, "archived":
+        false, "user_ts": 1522818910, "title": "25 Best Job Sites for Finding Your
+        First Developer Job", "created_at": 1522818910, "tags": [], "modified_at":
+        1522818910, "campaign_ids": [], "private": true, "aggregate_link": "http://bit.ly/1V1kepD",
+        "long_url": "https://skillcrush.com/2015/07/14/job-sites-to-find-your-first-developer-job/",
+        "client_id": "a5e8cebb233c5d07e5c553e917dffb92fec5264d", "link": "http://bit.ly/2GQBVJn",
+        "is_domain_deeplink": false, "encoding_user": {"login": "o_k9q7gj1kj", "display_name":
+        "Lani Berry", "full_name": "Lani Berry"}}, {"has_link_deeplinks": false, "archived":
+        false, "user_ts": 1522816641, "title": "Google", "created_at": 1522816641,
+        "tags": [], "modified_at": 1522816641, "campaign_ids": [], "private": true,
+        "aggregate_link": "http://bit.ly/2V6CFi", "long_url": "http://www.google.com/",
+        "client_id": "", "link": "http://bit.ly/2Gvv58L", "is_domain_deeplink": false,
+        "encoding_user": {"login": "o_k9q7gj1kj", "display_name": "Lani Berry", "full_name":
+        "Lani Berry"}}, {"has_link_deeplinks": false, "archived": false, "user_ts":
+        1522640251, "title": "Search Algorithms in Ruby \u2013 Michelle \u2013 Medium",
+        "created_at": 1522640251, "tags": [], "modified_at": 1522640251, "campaign_ids":
+        [], "private": true, "aggregate_link": "http://bit.ly/2Gu1JYu", "long_url":
+        "https://medium.com/@limichelle21/search-algorithms-in-ruby-c3b8c9b70451",
+        "client_id": "a5e8cebb233c5d07e5c553e917dffb92fec5264d", "link": "http://bit.ly/2Gr1jC1",
+        "is_domain_deeplink": false, "encoding_user": {"login": "o_k9q7gj1kj", "display_name":
+        "Lani Berry", "full_name": "Lani Berry"}}, {"has_link_deeplinks": false, "archived":
+        false, "user_ts": 1522639544, "title": "Google", "created_at": 1522639544,
+        "tags": [], "modified_at": 1522639544, "campaign_ids": [], "private": true,
+        "aggregate_link": "http://bit.ly/3j4ir4", "long_url": "http://google.com/",
+        "client_id": "a5e8cebb233c5d07e5c553e917dffb92fec5264d", "link": "http://bit.ly/2uF10C9",
+        "is_domain_deeplink": false, "encoding_user": {"login": "o_k9q7gj1kj", "display_name":
+        "Lani Berry", "full_name": "Lani Berry"}}], "result_count": 6}, "status_txt":
+        "OK"}'
+    http_version: 
+  recorded_at: Wed, 04 Apr 2018 07:56:08 GMT
+recorded_with: VCR 4.0.0
