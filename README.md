@@ -1,6 +1,9 @@
 # Shortybit
 
-Ruby Library for accessing Bitly's REST API
+Ruby Library for accessing Bitly's API for these specific endpoints:
+  - /v3/user/link_save
+  - /v3/user/link_history
+  - /v3/user/clicks
 
 To use this gem, you need a bit.ly access token.  To register go to [bitly.com](https://bitly.com/a/sign_up?utm_content=site-free-button&utm_source=organic&utm_medium=website&utm_campaign=null&utm_cta=site-free-button).  
 If you already have a bit.ly account:
@@ -118,5 +121,3 @@ Tests can be run with this command:
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-# shortybit
