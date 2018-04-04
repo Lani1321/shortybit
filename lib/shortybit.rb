@@ -1,5 +1,2 @@
 require "shortybit/version"
-
-module Shortybit
-  # Your code goes here...
-end
+require_relative "shortybit/client"
