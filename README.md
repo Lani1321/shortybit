@@ -15,6 +15,9 @@ If you already have a bit.ly account:
   - If you clicked on 'OAuth' then click on 'Generic Access Token'
   - Put in your password then click the orange 'Generate Token' button at the bottom
 
+## Dependencies
+  - [bundler](http://bundler.io/)
+  - [RubyGems](https://github.com/rubygems/rubygems)
 ## Installation
 
 Add this line to your application's Gemfile:
