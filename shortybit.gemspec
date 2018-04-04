@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["lani.berry13@gmail.com"]
 
   spec.summary       = %q{Gem to wrap Bitly API.}
-  spec.description   = %q{Gem to wrap Bitly API.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.description   = %q{Ruby library for accessing Bitly API.}
+  spec.homepage      = "https://github.com/Lani1321/shortybit"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
