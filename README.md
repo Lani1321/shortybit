@@ -33,10 +33,10 @@ Or install it yourself as:
 Create a client using your access token as follows:
 ```
   # Create a client
-  client = Shortybit::Client.new(access_token)
+  client = Shortybit::Client.new('your_bitly_access_token')
 
   # Result 
-  #<Shortybit::Client:0x007fee034de178 @access_token="664d80152194f99805a5979316e0f1af16416666">
+  #<Shortybit::Client:0x007fee034de178 @access_token="your_bitly_access_token">
 
 ```
 
